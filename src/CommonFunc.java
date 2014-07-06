@@ -2,9 +2,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * 汎用的な関数を定義する。
+ *
+ */
 public class CommonFunc {
 
-    private static long gcd(long n1, long n2) {
+    /**
+     * 
+     * @param n1
+     * @param n2
+     * @return
+     */
+    static long gcd(long n1, long n2) {
         return (n2 == 0)?n1:gcd(n2, n1%n2);
     }
     
@@ -17,11 +27,18 @@ public class CommonFunc {
      * @param n2
      * @return
      */
-    private static int gcd(int n1, int n2) {
+    static int gcd(int n1, int n2) {
         return (n2 == 0)?n1:gcd(n2, n1%n2);
     }
 
-    private static List<Integer> searchFactor(int n) {
+    /**
+     * 引数の数値の約数を設定したリストを返却する。
+     * ただし、引数自身の数と1は約数に含めない。
+     * 
+     * @param n
+     * @return
+     */
+    static List<Integer> searchFactor(int n) {
         List<Integer> list = new ArrayList<Integer>();
       
         int length = (int) Math.sqrt(n);
@@ -34,19 +51,5 @@ public class CommonFunc {
             }
         }
         return list; 
-    }
-    public static void main(String[] args) {
-      
-        List<Integer> list = searchFactor(529) ;
-        for (int i : list) {
-            System.out.println(i);
-        }
-        
-//        for (int i = 1; i <= 100; i++) {
-//            for (int j = 1; j <= 100; j++) {
-//                System.out.print(gcd(i, j) + " ");
-//            }
-//            System.out.println();
-//        }
     }
 }

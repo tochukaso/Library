@@ -1,4 +1,8 @@
-
+/**
+ * UnionFindのデータ構造を実現するクラス
+ * UnionFindは各要素がどの集合に所属しているかを判別するために使用できる
+ *
+ */
 public class UnionFind {
     // 各要素が保持している親のindex
     private int[] parentArray ;
