@@ -1,19 +1,19 @@
 import java.util.Arrays;
 
 /**
- * ”z—ñ‚ÉŠÖ‚·‚é‘{¸‚ğæ‚èˆµ‚¤ƒNƒ‰ƒX
+ * é…åˆ—ã«é–¢ã™ã‚‹æœæŸ»ã‚’å–ã‚Šæ‰±ã†ã‚¯ãƒ©ã‚¹
  *  
  *
  */
 public class ArrayCommon {
 
     /**
-     * ”z—ñ‚Ì––”ö‚Éw’è‚Ì—v‘f‚ğ’Ç‰Á‚·‚éB
-     * Œ³‚Ì”z—ñ‚ğƒRƒs[‚µ‚½V‚µ‚¢”z—ñ‚ğ•Ô‹p‚·‚éB
-     * Œ³‚Ì”z—ñ‚ªnull‚Ìê‡ANullPointerException‚ğƒXƒ[‚·‚é 
-     * @param original ƒRƒs[Œ³‚Ìint”z—ñ 
-     * @param addNum   ––”ö‚É’Ç‰Á‚µ‚½‚¢—v‘f
-     * @return —v‘f‚ğ’Ç‰Á‚µ‚½”z—ñ‚ğ•Ô‹p‚·‚é
+     * é…åˆ—ã®æœ«å°¾ã«æŒ‡å®šã®è¦ç´ ã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * å…ƒã®é…åˆ—ã‚’ã‚³ãƒ”ãƒ¼ã—ãŸæ–°ã—ã„é…åˆ—ã‚’è¿”å´ã™ã‚‹ã€‚
+     * å…ƒã®é…åˆ—ãŒnullã®å ´åˆã€NullPointerExceptionã‚’ã‚¹ãƒ­ãƒ¼ã™ã‚‹ 
+     * @param original ã‚³ãƒ”ãƒ¼å…ƒã®inté…åˆ— 
+     * @param addNum   æœ«å°¾ã«è¿½åŠ ã—ãŸã„è¦ç´ 
+     * @return è¦ç´ ã‚’è¿½åŠ ã—ãŸé…åˆ—ã‚’è¿”å´ã™ã‚‹
      */
     final int[] addArray(final int[] original, final int addNum) {
         int[] res = new int[original.length + 1];
@@ -23,12 +23,12 @@ public class ArrayCommon {
     }
 
     /**
-     * ”z—ñ‚Ì––”ö‚Éw’è‚Ì”z—ñ‚ğ’Ç‰Á‚·‚éB
-     * Œ³‚Ì”z—ñ‚ğƒRƒs[‚µ‚½V‚µ‚¢”z—ñ‚ğ•Ô‹p‚·‚éB
-     * ”z—ñ‚ªnull‚Ìê‡ANullPointerException‚ğƒXƒ[‚·‚é 
-     * @param original ƒRƒs[Œ³‚Ìint”z—ñ
-     * @param addArray ––”ö‚É’Ç‰Á‚µ‚½‚¢”z—ñ
-     * @return —v‘f‚ğ’Ç‰Á‚µ‚½”z—ñ‚ğ•Ô‹p‚·‚é
+     * é…åˆ—ã®æœ«å°¾ã«æŒ‡å®šã®é…åˆ—ã‚’è¿½åŠ ã™ã‚‹ã€‚
+     * å…ƒã®é…åˆ—ã‚’ã‚³ãƒ”ãƒ¼ã—ãŸæ–°ã—ã„é…åˆ—ã‚’è¿”å´ã™ã‚‹ã€‚
+     * é…åˆ—ãŒnullã®å ´åˆã€NullPointerExceptionã‚’ã‚¹ãƒ­ãƒ¼ã™ã‚‹ 
+     * @param original ã‚³ãƒ”ãƒ¼å…ƒã®inté…åˆ—
+     * @param addArray æœ«å°¾ã«è¿½åŠ ã—ãŸã„é…åˆ—
+     * @return è¦ç´ ã‚’è¿½åŠ ã—ãŸé…åˆ—ã‚’è¿”å´ã™ã‚‹
      */
     final int[] addArray(final int[] original, final int[] addArray) {
         int[] res = new int[original.length + addArray.length];
@@ -38,11 +38,11 @@ public class ArrayCommon {
     }
 
     /**
-     * ”z—ñ‚©‚çw’è‚³‚ê‚½ƒCƒ“ƒfƒbƒNƒX‚Ì—v‘f‚ğíœ‚·‚é
-     * Œ³‚Ì”z—ñ‚ğƒRƒs[‚µ‚½V‚µ‚¢”z—ñ‚ğ•Ô‹p‚·‚éB
-     * @param original ƒRƒs[Œ³‚Ìint”z—ñ
-     * @param removeIndex íœ‘ÎÛ‚ÌƒCƒ“ƒfƒbƒNƒX
-     * @return —v‘f‚ğíœ‚µ‚½”z—ñ‚ğ•Ô‹p‚·‚é
+     * é…åˆ—ã‹ã‚‰æŒ‡å®šã•ã‚ŒãŸã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ã®è¦ç´ ã‚’å‰Šé™¤ã™ã‚‹
+     * å…ƒã®é…åˆ—ã‚’ã‚³ãƒ”ãƒ¼ã—ãŸæ–°ã—ã„é…åˆ—ã‚’è¿”å´ã™ã‚‹ã€‚
+     * @param original ã‚³ãƒ”ãƒ¼å…ƒã®inté…åˆ—
+     * @param removeIndex å‰Šé™¤å¯¾è±¡ã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹
+     * @return è¦ç´ ã‚’å‰Šé™¤ã—ãŸé…åˆ—ã‚’è¿”å´ã™ã‚‹
      */
     final int[] removeArray(final int[] original, final int removeIndex) {
         int[] res = new int[original.length - 1];
@@ -53,12 +53,12 @@ public class ArrayCommon {
     
    
     /**
-     * ”z—ñ‚Ì—v‘f‚ğæ‚è‚©‚¦‚éB
-     * Œ³‚Ì”z—ñ‚ğƒRƒs[‚µ‚½V‚µ‚¢”z—ñ‚ğ•Ô‹p‚·‚é
-     * @param original ƒRƒs[Œ³‚Ìint”z—ñ
-     * @param fromIndex ŒğŠ·Œ³‚ÌƒCƒ“ƒfƒbƒNƒX”Ô†
-     * @param toIndex ŒğŠ·æ‚ÌƒCƒ“ƒfƒbƒNƒX”Ô†
-     * @return —v‘f‚ğŒğŠ·‚µ‚½”z—ñ‚ğ•Ô‹p‚·‚é
+     * é…åˆ—ã®è¦ç´ ã‚’å–ã‚Šã‹ãˆã‚‹ã€‚
+     * å…ƒã®é…åˆ—ã‚’ã‚³ãƒ”ãƒ¼ã—ãŸæ–°ã—ã„é…åˆ—ã‚’è¿”å´ã™ã‚‹
+     * @param original ã‚³ãƒ”ãƒ¼å…ƒã®inté…åˆ—
+     * @param fromIndex äº¤æ›å…ƒã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ç•ªå·
+     * @param toIndex äº¤æ›å…ˆã®ã‚¤ãƒ³ãƒ‡ãƒƒã‚¯ã‚¹ç•ªå·
+     * @return è¦ç´ ã‚’äº¤æ›ã—ãŸé…åˆ—ã‚’è¿”å´ã™ã‚‹
      */
     final int[] swapArray(final int[] original, final int fromIndex, final int toIndex) {
         int[] res = Arrays.copyOf(original, original.length);
@@ -69,7 +69,7 @@ public class ArrayCommon {
     }
 
     /**
-     * intŒ^”z—ñ‚Ì—v‘f‚Ì”äŠr
+     * intå‹é…åˆ—ã®è¦ç´ ã®æ¯”è¼ƒ
      * @param compare1
      * @param compare2
      * @return
@@ -84,8 +84,8 @@ public class ArrayCommon {
 
 
     /**
-     * intŒ^s—ñ‚ÌŠ|‚¯Z
-     * ‘æˆêˆø”‚Ì‰¡•‚Ì’·‚³‚Æ‘æ2ˆø”‚Ìc‚Ì—l‘f”‚ªˆê’v‚µ‚È‚¢ê‡‚ÉIllegalArgumentException‚ğƒXƒ[‚·‚éB
+     * intå‹è¡Œåˆ—ã®æ›ã‘ç®—
+     * ç¬¬ä¸€å¼•æ•°ã®æ¨ªå¹…ã®é•·ã•ã¨ç¬¬2å¼•æ•°ã®ç¸¦ã®æ§˜ç´ æ•°ãŒä¸€è‡´ã—ãªã„å ´åˆã«IllegalArgumentExceptionã‚’ã‚¹ãƒ­ãƒ¼ã™ã‚‹ã€‚
      * @param lineMatrix
      * @param columnMatrix
      * @return
@@ -114,8 +114,8 @@ public class ArrayCommon {
 
     /**
      * 
-     * longŒ^s—ñ‚ÌŠ|‚¯Z
-     * ‘æˆêˆø”‚Ì‰¡•‚Ì’·‚³‚Æ‘æ2ˆø”‚Ìc‚Ì—l‘f”‚ªˆê’v‚µ‚È‚¢ê‡‚ÉIllegalArgumentException‚ğƒXƒ[‚·‚éB
+     * longå‹è¡Œåˆ—ã®æ›ã‘ç®—
+     * ç¬¬ä¸€å¼•æ•°ã®æ¨ªå¹…ã®é•·ã•ã¨ç¬¬2å¼•æ•°ã®ç¸¦ã®æ§˜ç´ æ•°ãŒä¸€è‡´ã—ãªã„å ´åˆã«IllegalArgumentExceptionã‚’ã‚¹ãƒ­ãƒ¼ã™ã‚‹ã€‚
      * @param lineMatrix
      * @param columnMatrix
      * @return
@@ -142,7 +142,7 @@ public class ArrayCommon {
     }
 
     /**
-     * intŒ^‚Ì2ŸŒ³”z—ñ‚ğ•W€o—Í‚Éo—Í‚·‚éB
+     * intå‹ã®2æ¬¡å…ƒé…åˆ—ã‚’æ¨™æº–å‡ºåŠ›ã«å‡ºåŠ›ã™ã‚‹ã€‚
      * @param p
      */
     final void printMatrix(int[][] p) {
@@ -150,7 +150,7 @@ public class ArrayCommon {
     }
     
     /**
-     * intŒ^‚Ì”z—ñ‚ğ•W€o—Í‚É”¼ŠpƒXƒy[ƒX‚ğ‹æØ‚è•¶š‚Æ‚µ‚Äo—Í‚·‚éB
+     * intå‹ã®é…åˆ—ã‚’æ¨™æº–å‡ºåŠ›ã«åŠè§’ã‚¹ãƒšãƒ¼ã‚¹ã‚’åŒºåˆ‡ã‚Šæ–‡å­—ã¨ã—ã¦å‡ºåŠ›ã™ã‚‹ã€‚
      * @param p
      */
     final void printArray(int[] p) {
@@ -159,7 +159,7 @@ public class ArrayCommon {
     }
 
     /**
-     * charŒ^‚Ì”z—ñ‚ª“™‚µ‚¢‚©A‘S‚Ä‚Ì—v‘f‚ğ‘{¸‚·‚éB
+     * charå‹ã®é…åˆ—ãŒç­‰ã—ã„ã‹ã€å…¨ã¦ã®è¦ç´ ã‚’æœæŸ»ã™ã‚‹ã€‚
      * @param i1
      * @param i2
      * @return
@@ -171,7 +171,7 @@ public class ArrayCommon {
     }
    
     /**
-     * intŒ^‚Ì”z—ñ‚ª“™‚µ‚¢‚©A‘S‚Ä‚Ì—v‘f‚ğ‘{¸‚·‚éB
+     * intå‹ã®é…åˆ—ãŒç­‰ã—ã„ã‹ã€å…¨ã¦ã®è¦ç´ ã‚’æœæŸ»ã™ã‚‹ã€‚
      * @param i1
      * @param i2
      * @return
@@ -183,7 +183,7 @@ public class ArrayCommon {
     }
     
     /**
-     * intŒ^‚Ì”z—ñ‚ğ”¼ŠpƒXƒy[ƒX‹æØ‚è‚Ì•¶š—ñŒ^‚É•ÏŠ·‚·‚éB
+     * intå‹ã®é…åˆ—ã‚’åŠè§’ã‚¹ãƒšãƒ¼ã‚¹åŒºåˆ‡ã‚Šã®æ–‡å­—åˆ—å‹ã«å¤‰æ›ã™ã‚‹ã€‚
      * @param i
      * @return
      */
@@ -194,7 +194,7 @@ public class ArrayCommon {
     }
 
     /**
-     * intŒ^‚Ì”z—ñ‚ğIntegerŒ^‚Ì”z—ñ‚É•ÏŠ·‚µ‚Ä•Ô‹p‚·‚éB
+     * intå‹ã®é…åˆ—ã‚’Integerå‹ã®é…åˆ—ã«å¤‰æ›ã—ã¦è¿”å´ã™ã‚‹ã€‚
      * @param arg
      * @return
      */

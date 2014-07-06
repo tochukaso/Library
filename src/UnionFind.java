@@ -1,16 +1,16 @@
 /**
- * UnionFind�̃f�[�^�\������������N���X
- * UnionFind�͊e�v�f���ǂ̏W���ɏ������Ă��邩�𔻕ʂ��邽�߂Ɏg�p�ł���
+ * UnionFindのデータ構造を実現するクラス
+ * UnionFindは各要素がどの集合に所属しているかを判別するために使用できる
  *
  */
 public class UnionFind {
-    // �e�v�f���ێ����Ă���e��index
+    // 各要素が保持している親のindex
     private int[] parentArray ;
     
-    // �e�v�f���ێ����Ă���؂̐[��
+    // 各要素が保持している木の深さ
     private int[] rankArray;
     
-    // �v�f��
+    // 要素数
     private int nodeCount;
 
     public UnionFind(int totalCount) {
@@ -26,10 +26,10 @@ public class UnionFind {
     
     /**
      * <pre>
-     * �v�f����
-     * �C���f�b�N�X���v�f�̏��ԂƓ������Ƃ��͈����̒l�����̂܂ܕԋp����B
-     * �C���f�b�N�X�̏��Ԃ��������Ȃ��Ƃ��͌��������C���f�b�N�X���X�g��
-     * �i�[����Ă���ԍ������ɍēx�������s���A�ċA�I�ɃC���f�b�N�X�z��̔ԍ������ւ���B
+     * 要素検索
+     * インデックスが要素の順番と等しいときは引数の値をそのまま返却する。
+     * インデックスの順番が等しくないときは検索したインデックスリストに
+     * 格納されている番号を元に再度検索を行い、再帰的にインデックス配列の番号を入れ替える。
      * </pre>
      * @param nodeIndex
      * @return

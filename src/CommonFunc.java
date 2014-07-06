@@ -3,7 +3,7 @@ import java.util.List;
 
 
 /**
- * �ėp�I�Ȋ֐����`����B
+ * 汎用的な関数を定義する。
  *
  */
 public class CommonFunc {
@@ -19,10 +19,10 @@ public class CommonFunc {
     }
     
     /**
-     * �ő���񐔂��擾����
-     * �ċA�֐����g�p���āA
-     * ��]��0�ɂȂ邩���ׂ�B��]��0�̏ꍇ�A���̐��Ŋ���؂��̂ł��̐����ő���񐔂ƂȂ�B
-     * ��]��0�łȂ��ꍇ�A��]�Ɗ��鐔���w�肵�čċA����B 
+     * 最大公約数を取得する
+     * 再帰関数を使用して、
+     * 剰余が0になるか調べる。剰余が0の場合、その数で割り切れるのでその数が最大公約数となる。
+     * 剰余が0でない場合、剰余と割る数を指定して再帰する。 
      * @param n1
      * @param n2
      * @return
@@ -32,8 +32,8 @@ public class CommonFunc {
     }
 
     /**
-     * �����̐��l�̖񐔂�ݒ肵�����X�g��ԋp����B
-     * �������A�������g�̐���1�͖񐔂Ɋ܂߂Ȃ��B
+     * 引数の数値の約数を設定したリストを返却する。
+     * ただし、引数自身の数と1は約数に含めない。
      * 
      * @param n
      * @return
