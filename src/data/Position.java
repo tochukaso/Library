@@ -1,3 +1,4 @@
+package data;
 /**
  * C言語のTypeの代わりに使用するクラス 
  *

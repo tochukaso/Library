@@ -1,3 +1,4 @@
+package data;
 /**
  * UnionFindのデータ構造を実現するクラス
  * UnionFindは各要素がどの集合に所属しているかを判別するために使用できる
