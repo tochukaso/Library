@@ -13,7 +13,7 @@ public class TestArrayCommon {
     public void testAddArrayIntArrayInt() {
         int[] array = {1,2,3,4};
         int[] res = {1,2,3,4,0};
-        Assert.assertArrayEquals(test.addArray(array, 0),  res);
+        Assert.assertArrayEquals(test.addNum(array, 0),  res);
 
         
 //        fail("Not yet implemented");

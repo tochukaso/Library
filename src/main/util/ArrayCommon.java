@@ -16,7 +16,7 @@ public class ArrayCommon {
      * @param addNum   末尾に追加したい要素
      * @return 要素を追加した配列を返却する
      */
-    public final int[] addArray(final int[] original, final int addNum) {
+    public final int[] addNum(final int[] original, final int addNum) {
         int[] res = new int[original.length + 1];
         System.arraycopy(original, 0, res, 0, original.length);
         res[original.length] = addNum;
@@ -45,7 +45,7 @@ public class ArrayCommon {
      * @param removeIndex 削除対象のインデックス
      * @return 要素を削除した配列を返却する
      */
-    public final int[] removeArray(final int[] original, final int removeIndex) {
+    public final int[] removeElementAtIndex(final int[] original, final int removeIndex) {
         int[] res = new int[original.length - 1];
         System.arraycopy(original, 0, res, 0, removeIndex);
         System.arraycopy(original, removeIndex + 1, res, removeIndex, original.length - removeIndex - 1);
@@ -61,7 +61,7 @@ public class ArrayCommon {
      * @param toIndex 交換先のインデックス番号
      * @return 要素を交換した配列を返却する
      */
-    public final int[] swapArray(final int[] original, final int fromIndex, final int toIndex) {
+    public final int[] swapElement(final int[] original, final int fromIndex, final int toIndex) {
         int[] res = Arrays.copyOf(original, original.length);
         int tmp = res[fromIndex];
         res[fromIndex] = res[toIndex];
@@ -75,7 +75,7 @@ public class ArrayCommon {
      * @param compare2
      * @return
      */
-    public final int convArray(final int[] compare1, final int[] compare2) {
+    public final int countDiffrentElement(final int[] compare1, final int[] compare2) {
         int sum = 0;
         for (int i = 0; i < compare1.length; i++) {
             if (compare1[i] != compare2[i]) sum++;
@@ -91,7 +91,7 @@ public class ArrayCommon {
      * @param columnMatrix
      * @return
      */
-    public final int[][] maltipuleMatrix(final int[][] lineMatrix, int[][] columnMatrix) {
+    public final int[][] multipleMatrix(final int[][] lineMatrix, int[][] columnMatrix) {
         
         if (lineMatrix[0].length != columnMatrix.length) {
             throw new IllegalArgumentException(" line elements and column elements does'nt matching");
