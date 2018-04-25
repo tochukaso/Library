@@ -9,23 +9,23 @@ import java.util.Set;
  * グラフ問題で、それぞれの頂点から頂点への最短距離を測定する。
  * 一般的に「全点対最短経路」を解くアルゴリズムとして知られている。
  * 計算量は、O(N^3)
- * 
+ *
  *
  */
 public class WarshallFloyd {
-    
+
     /**
      * 頂点の数
      */
     static int V = 8;
-    
+
     /**
      * 各頂点を結ぶ辺の移動コストを表す。
      */
     static int[][] E = new int[V*2][3];
 
     static {
-        
+
         /**
          * 辺の初期化
          */
@@ -35,7 +35,7 @@ public class WarshallFloyd {
             int from = (int) (Math.random() * V );
             int to = (int) (Math.random() * V);
             String key = String.valueOf(from) + to;
-            
+
             if (from <= to || !used.add(key)) continue;
             int cost = (int) (Math.random() * 9 + 1);
             E[eCnt][0] = from;
@@ -43,7 +43,7 @@ public class WarshallFloyd {
             E[eCnt][2] = cost;
             eCnt++;
         }
-        
+
         for (int[] ar : E) {
             for (int k = 0; k < 3; k++) {
                 System.out.print(ar[k] + " ");
@@ -51,23 +51,23 @@ public class WarshallFloyd {
             System.out.println();
         }
     }
-    
+
     /**
      * ワーシャルフロイドによる全点対最短経路を求める。
      * int[][] dpにそれぞれの各頂点間の最小のコストが格納される。
-     * 
+     *
      * @param E 辺の要素 頂点from, 頂点to, コストを格納した2次元配列
      */
-    static void warshallFloyd(int[][] E) {
-        
+    void warshallFloyd(int[][] E, int V) {
+
         int[][] dp = new int[V][V];
-        
+
         for (int i = 0; i < V; i++) {
             // 適度に大きい値を設定する。オーバーフローにを付ける必要がある。
             Arrays.fill(dp[i], Integer.MAX_VALUE / 100);
             dp[i][i] = 0;
-        } 
-        
+        }
+
         // 各辺のコストをDPに当てはめる。
         for (int[] is : E) {
             dp[is[0]][is[1]] = is[2];
@@ -81,7 +81,7 @@ public class WarshallFloyd {
                 }
             }
         }
-        
+
         System.out.println();
         for (int i = 0; i < V; i++) {
             for (int j = 0; j < V; j++) {
@@ -89,10 +89,10 @@ public class WarshallFloyd {
             }
             System.out.println();
         }
-        
+
     }
 
     public static void main(String[] args) {
-        warshallFloyd(E);
+        new WarshallFloyd().warshallFloyd(E, V);
     }
 }
